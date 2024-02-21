@@ -1,0 +1,22 @@
+{
+  "welcome": "Hello!!!",
+  "title": "Madrid System Cost Estimator",
+  "form": {
+    "type": {
+      "label": "Type of Registration",
+      "options": {
+        "default": "Choose mark",
+        "new": "New registration",
+        "additional_countries": "Additional countries",
+        "extension": "Extension of the registration period"
+      }
+    },
+    "classMark": "Number of classes covered by the mark",
+    "country": {
+      "label": "Choose a Countries",
+      "field": "Choose a Countries",
+      "search": "Search..."
+    },
+    "button": "Calculate"
+  }
+}

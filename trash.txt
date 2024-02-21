@@ -1,0 +1,57 @@
+<Autocomplete
+        options={countries}
+        getOptionLabel={(option) => `${option.label} (${option.code})`} // Отображение названия страны и ее инициалов
+        filterOptions={(options, { inputValue }) => // Добавляем логику фильтрации
+          options.filter((option) =>
+            option.label.toLowerCase().includes(inputValue.toLowerCase()) || 
+            option.code.toLowerCase().includes(inputValue.toLowerCase())
+          )
+        }
+        sx={{
+        "& .MuiOutlinedInput-root": {
+          "&:hover .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#374151", // Цвет границы при наведении
+          },
+          ".MuiOutlinedInput-notchedOutline": {
+            borderColor: "white", // Основной цвет границы
+          }
+        }
+      }}
+        renderInput={(params) => (
+          <TextField {...params}
+            label="Выберите страну"
+            variant="outlined"
+            sx={{
+              '& .MuiInputBase-input': {
+          color: 'white', // Задаем цвет текста
+        },
+        '& label': {
+          color: 'lightgray', // Цвет текста метки, когда она не в фокусе
+        },
+        '& label.Mui-focused': {
+          color: 'white', // Цвет текста метки, когда она в фокусе
+        },
+        '& .MuiOutlinedInput-root': {
+          '& fieldset': {
+            borderColor: 'grey', // Цвет границы, когда она не в фокусе
+          },
+          '&:hover fieldset': {
+            borderColor: 'lightgray', // Цвет границы при наведении
+          },
+          '&.Mui-focused fieldset': {
+            borderColor: 'white', // Цвет границы, когда она в фокусе
+          },
+              },
+        '& .MuiSvgIcon-root': {
+          color: 'white', // Указываем цвет стрелки
+        },
+            }}
+          />
+        )}
+        renderOption={(props, option) => (
+          <Box component="li" {...props}>
+            {option.label} ({option.code})
+          </Box>
+        )}
+        style={{ width: '100%', color: 'white' }} // Для полной ширины
+        />
