@@ -1,7 +1,11 @@
 import * as React from 'react';
 import { Modal, Box, Typography, List, ListItem, ListItemText, Divider, Button } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+
 
 function ProtocolModal({ open, handleClose }) {
+  const { t } = useTranslation();
+  
   return (
     <Modal
       open={open}
@@ -54,7 +58,7 @@ function ProtocolModal({ open, handleClose }) {
         </List>
         <Box sx={{ mt: 2, display: 'flex', justifyContent: 'flex-end' }}>
           <Button variant="contained" onClick={handleClose}>
-            Закрыть
+            {t('closeBtn')}
           </Button>
         </Box>
       </Box>
