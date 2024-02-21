@@ -15,4 +15,7 @@ export default defineConfig({
       changeOrigin: true,
     },
   },
+  server: {
+    port: process.env.PORT, // Specify the desired port number
+  },
 });
