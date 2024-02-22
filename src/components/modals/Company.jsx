@@ -31,19 +31,19 @@ const CompanyModal = ({ open, handleClose, company }) => {
           {t('result.company')}
         </Typography>
         {company.patent && <Typography id="modal-description" sx={{ mt: 2 }}>
-          {t('result.modal.patent')} <strong>50000 ₸</strong>
+          {t('result.modal.patent')} <strong>50 000 ₸</strong>
         </Typography>}
 
         <Typography id="modal-description1" sx={{ mt: 2 }}>
-          {t('result.modal.manager')} <strong>{ company.manager } ₸</strong>
+          {t('result.modal.manager')} <strong>{ Math.round(company.manager).toLocaleString() } ₸</strong>
         </Typography>
 
         <Typography id="modal-description2" sx={{ mt: 2 }}>
-          {t('result.modal.company')} <strong>{ company.company } ₸</strong>
+          {t('result.modal.company')} <strong>{ Math.round(company.company).toLocaleString() } ₸</strong>
         </Typography>
 
         <Typography id="modal-description3" sx={{ mt: 2 }}>
-          {t('result.modal.res')} <strong>{ company.sum } ₸</strong>
+          {t('result.modal.res')} <strong>{ Math.round(company.sum).toLocaleString() } ₸</strong>
         </Typography>
           
         <Button onClick={handleClose}>{t('closeBtn')}</Button>

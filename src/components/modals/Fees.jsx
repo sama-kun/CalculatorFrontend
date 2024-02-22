@@ -40,31 +40,31 @@ const FeeModal = ({ open, handleClose, name , code , res}) => {
         {}
         {res.firstFee &&
           <Typography id="modal-description" sx={{ mt: 2 }}>
-            {t('result.modal.firstFee')} <strong>{res.firstFee} ₸</strong>
+            {t('result.modal.firstFee')} <strong>{Math.round(res.firstFee).toLocaleString()} ₸</strong>
           </Typography>
         }
 
         {res.thirdFee &&
           <Typography id="modal-description" sx={{ mt: 2 }}>
-            {t('result.modal.thirdFee')} <strong>{res.thirdFee} ₸</strong>
+            {t('result.modal.thirdFee')} <strong>{Math.round(res.thirdFee).toLocaleString()} ₸</strong>
           </Typography>
         }
         
         {res.extraFee &&
           <Typography id="modal-description" sx={{ mt: 2 }}>
             {t('result.modal.extraFee')}
-            <p><strong>{res.extraMark} x {res.extraOneFee} = { res.extraFee }</strong></p>
+            <p><strong>{res.extraMark} x {Math.round(res.extraOneFee).toLocaleString()} = { Math.round(res.extraFee).toLocaleString() }</strong></p>
           </Typography>
         }
 
         {res.ordinaryFee &&
           <Typography id="modal-description" sx={{ mt: 2 }}>
-            {t('result.modal.ordinary')} <strong>{res.ordinaryFee} ₸</strong>
+            {t('result.modal.ordinary')} <strong>{th.round(es.ordinaryFee).toLocaleString()} ₸</strong>
           </Typography>
         }
 
         <Typography id="modal-description" sx={{ mt: 2 }}>
-            {t('result.modal.res')} <strong>{res.sum} ₸</strong>
+            {t('result.modal.res')} <strong>{Math.round(res.sum).toLocaleString()} ₸</strong>
           </Typography>
           
         <Button onClick={handleClose}>{t('closeBtn')}</Button>

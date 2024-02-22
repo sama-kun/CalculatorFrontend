@@ -34,7 +34,13 @@
       "firstFee": "Fee for the 1st class: ",
       "thirdFee": "Fee for 3rd class: ",
       "extraFee": "Payment for additional classes: ",
-      "ordinary": "For all classes: "
+      "ordinary": "For all classes: ",
+      "password": {
+        "label": "Enter password for detailed information",
+        "button": "Send",
+        "placeholder": "Password",
+        "warning": "Incorrect password. Please try again."
+      }
     }
   },
   "closeBtn": "Close₸"
