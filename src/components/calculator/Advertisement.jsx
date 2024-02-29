@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Box, Button } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
-import ProtocolModal from './modals/Protocol'
+import ProtocolModal from '../modals/Protocol'
 
 const Advertisement = () => {
 

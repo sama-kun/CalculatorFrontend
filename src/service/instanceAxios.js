@@ -5,6 +5,7 @@ import axios from "axios";
 // Create Axios instance
 // const baseURL = process.env.BASE_URL;
 const baseURL = "https://plankton-app-gascv.ondigitalocean.app";
+// const baseURL = "http://localhost:8000";
 
 // Create Axios instance with base URL
 const axiosInstance = axios.create({

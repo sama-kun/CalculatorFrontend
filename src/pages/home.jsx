@@ -1,14 +1,16 @@
-import CalculatorForm from '../components/Calculator';
-import Header from '../components/Header';
+import CalculatorForm from '../components/screens/Calculator';
+import Header from '../components/layouts/Header';
+import MainLayout from '../components/layouts/MainLayout';
 
-function Home() {
+function HomePage() {
 
   return (
     <>
-      <Header/>
-      <CalculatorForm />
+      <MainLayout>
+        <CalculatorForm />
+        </MainLayout>
     </>
   );
 }
 
-export default Home;
+export default HomePage;

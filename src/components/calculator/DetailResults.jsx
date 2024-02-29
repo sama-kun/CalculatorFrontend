@@ -3,11 +3,11 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import InfoIcon from '@mui/icons-material/Info';
 import { useTranslation } from 'react-i18next';
-import ResultsModal from './modals/Results';
-import BasicModal from './modals/Basic';
-import CompanyModal from './modals/Company';
-import BankModal from './modals/Bank';
-import FeeModal from './modals/Fees';
+import ResultsModal from '../modals/Results';
+import BasicModal from '../modals/Basic';
+import CompanyModal from '../modals/Company';
+import BankModal from '../modals/Bank';
+import FeeModal from '../modals/Fees';
 
 const DetailResults = ({ results }) => {
 

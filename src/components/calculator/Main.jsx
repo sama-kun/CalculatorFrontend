@@ -3,7 +3,7 @@ import SelectUI from '../UI/select/Select';
 import ExtraForm from './Extra';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
-import Results from '../Results';
+import Results from './Results';
 import axiosInstance from '../../service/instanceAxios';
 import CircularProgress from '@mui/material/CircularProgress';
 

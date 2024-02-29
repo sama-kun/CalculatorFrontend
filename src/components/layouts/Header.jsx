@@ -2,6 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -35,8 +36,8 @@ function Header() {
           Название компании
         </Typography>
 
-        <Button color="inherit">Главная</Button>
-        <Button color="inherit">Продукты</Button>
+        <Link to={'/'} color="inherit" className='mr-20'>{ t('header.home') }</Link>
+        <Link to={'/synonymizer'} color="inherit" className='mr-20'>{ t('header.synonym') }</Link>
 
         <IconButton color="inherit" aria-label="change language" onClick={handleMenu}>
           <LanguageIcon />

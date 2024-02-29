@@ -43,5 +43,9 @@
       }
     }
   },
-  "closeBtn": "Close₸"
+  "closeBtn": "Close",
+  "header": {
+    "synonym": "Synonymizer",
+    "home": "Home"
+  }
 }
