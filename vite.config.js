@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-// import reactRefresh from "@vitejs/plugin-react-refresh";
-import envCompatible from "vite-plugin-env-compatible";
+const port = process.env.PORT || 3000;
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,6 +15,6 @@ export default defineConfig({
     },
   },
   server: {
-    port: process.env.PORT, // Specify the desired port number
+    port, // Specify the desired port number
   },
 });
