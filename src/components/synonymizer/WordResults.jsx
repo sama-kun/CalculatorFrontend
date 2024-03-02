@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import Button from '@mui/material/Button';
 import axiosInstance from '../../service/instanceAxios';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import { Typography, Icon } from '@mui/material';
+import { InfoOutlined } from '@mui/icons-material';
 
 function WordResults({results, setLoading}) {
   const { t } = useTranslation();
@@ -44,17 +46,23 @@ function WordResults({results, setLoading}) {
           <div className="mb-4">
             <h2 className="mr-4">{results.word}</h2> {/* Заголовок */}
           </div>
-          {results?.wipo.map((value, index) => {
-            return <>
-              <div className="ml-4">
-                <p className="text-white">Класс {value.cls}:</p>
-                {value.text.map((word, index) => {
-                  return <p className="text-white ml-4">{ word.charAt(0).toUpperCase() + word.slice(1) }.</p>
-                })}
-              </div>
-              <br/>
-              </>
-      })}
+          {results?.wipo.length > 0 ? (
+        results.wipo.map((value, index) => (
+          <div key={index} style={{ marginLeft: '0.5rem' }}>
+            <Typography variant="body1" component="p" color="textPrimary">Класс {value.cls}:</Typography>
+            {value.text.map((word, index) => (
+              <Typography key={index} variant="body1" component="p" color="textPrimary" style={{ marginLeft: '0.5rem' }}>
+                {word.charAt(0).toUpperCase() + word.slice(1)}
+              </Typography>
+            ))}
+          </div>
+        ))
+      ) : (
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Icon component={InfoOutlined} style={{ marginRight: '0.5rem' }} />
+          <Typography variant="body1" component="p" color="white">Нет доступных результатов</Typography>
+        </div>
+      )}
         </div>
       </div>
       
@@ -64,13 +72,18 @@ function WordResults({results, setLoading}) {
             <h2 className="mr-4">Синонимы:</h2> {/* Заголовок */}
           </div>
           <div className="flex flex-wrap">
-          {results?.synonyms.map((value, index) => {
-            return <>
-                <span key={index} className="inline-block m-1 p-2 bg-gray-800 rounded-full">
-          {value}
-        </span>
-              </>
-          })}
+          {results?.synonyms && results?.synonyms.length > 0 ? (
+            results?.synonyms.map((value, index) => (
+              <span key={index} className="inline-block m-1 p-2 bg-gray-800 rounded-full">
+                {value}
+              </span>
+            ))
+          ) : (
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Icon component={InfoOutlined} style={{ marginRight: '0.5rem' }} />
+          <Typography variant="body1" component="p" color="white">Нет доступных результатов</Typography>
+        </div>
+          )}
             </div>
         </div>
         </div>
