@@ -49,9 +49,9 @@ function WordResults({results, setLoading}) {
           {results?.wipo.length > 0 ? (
         results.wipo.map((value, index) => (
           <div key={index} style={{ marginLeft: '0.5rem' }}>
-            <Typography variant="body1" component="p" color="textPrimary">Класс {value.cls}:</Typography>
+            <Typography variant="body1" component="p" color="white">Класс {value.cls}:</Typography>
             {value.text.map((word, index) => (
-              <Typography key={index} variant="body1" component="p" color="textPrimary" style={{ marginLeft: '0.5rem' }}>
+              <Typography key={index} variant="body1" component="p" color="white" style={{ marginLeft: '0.5rem' }}>
                 {word.charAt(0).toUpperCase() + word.slice(1)}
               </Typography>
             ))}
