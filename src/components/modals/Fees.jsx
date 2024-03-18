@@ -59,7 +59,7 @@ const FeeModal = ({ open, handleClose, name , code , res}) => {
 
         {res.ordinaryFee &&
           <Typography id="modal-description" sx={{ mt: 2 }}>
-            {t('result.modal.ordinary')} <strong>{th.round(es.ordinaryFee).toLocaleString()} ₸</strong>
+            {t('result.modal.ordinary')} <strong>{Math.round(res.ordinaryFee).toLocaleString()} ₸</strong>
           </Typography>
         }
 

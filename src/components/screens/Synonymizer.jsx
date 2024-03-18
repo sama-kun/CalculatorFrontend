@@ -45,7 +45,8 @@ const Synonymizer = () => {
         </div>
       )}
       <div className="flex justify-center">
-        <div className="p-4 my-10 border-2 border-white rounded-lg flex-row sm:w-full sm:p-5 w-full md:w-2/3">
+        <div className="p-4 my-10 rounded-lg flex-row sm:w-full sm:p-5 w-full md:w-2/3">
+        {/* <div className="p-4 my-10 border-2 border-white rounded-lg flex-row sm:w-full sm:p-5 w-full md:w-2/3"> */}
           <form onSubmit={handleSubmit} className='w-full'>
             <TextField
               label="Поиск"
