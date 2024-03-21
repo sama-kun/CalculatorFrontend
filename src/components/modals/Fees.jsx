@@ -37,10 +37,15 @@ const FeeModal = ({ open, handleClose, name , code , res}) => {
           />
           {name}
         </Typography>
-        {}
         {res.firstFee &&
           <Typography id="modal-description" sx={{ mt: 2 }}>
             {t('result.modal.firstFee')} <strong>{Math.round(res.firstFee).toLocaleString()} ₸</strong>
+          </Typography>
+        }
+
+        {res.secondFee &&
+          <Typography id="modal-description" sx={{ mt: 2 }}>
+            {t('result.modal.secondFee')} <strong>{Math.round(res.secondFee).toLocaleString()} ₸</strong>
           </Typography>
         }
 
@@ -57,9 +62,9 @@ const FeeModal = ({ open, handleClose, name , code , res}) => {
           </Typography>
         }
 
-        {res.ordinaryFee &&
+        {res.freeFee &&
           <Typography id="modal-description" sx={{ mt: 2 }}>
-            {t('result.modal.ordinary')} <strong>{Math.round(res.ordinaryFee).toLocaleString()} ₸</strong>
+            {t('result.modal.free')} <strong>{Math.round(res.freeFee).toLocaleString()} ₸</strong>
           </Typography>
         }
 

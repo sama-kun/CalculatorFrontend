@@ -22,8 +22,12 @@ const MainForm = () => {
   const onSubmit = async (data) => {
     setLoading(true); // Установка состояния загрузки в true при отправке запроса
     try {
-      const response = await axiosInstance.post('/calculator', data);
-      console.log(response.data)
+      let response = {};
+      console.log(data);
+      // if (data.typeOfMark) {
+        response = await axiosInstance.post('/calculator/test', data);
+      // } else response = await axiosInstance.post('/calculator', data);
+      // console.log(response.data)
       setServerResponse(response.data);
     } catch (error) {
       console.error('Error submitting form:', error);

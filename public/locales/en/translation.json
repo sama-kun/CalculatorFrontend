@@ -32,15 +32,17 @@
       "bank": "The bank's commission is 0.35% of the amount, but not less than 20,000 tenge, the maximum amount of the commission is 134 000 tenge",
       "fee": "Fee ",
       "firstFee": "Fee for the 1st class: ",
+      "secondFee": "Fee for the 2nd class: ",
       "thirdFee": "Fee for 3rd class: ",
       "extraFee": "Payment for additional classes: ",
       "ordinary": "For all classes: ",
-      "password": {
-        "label": "Enter password for detailed information",
-        "button": "Send",
-        "placeholder": "Password",
-        "warning": "Incorrect password. Please try again."
-      }
+      "free": "Regardless of the class: "
+    },
+    "password": {
+      "label": "Enter password for detailed information",
+      "button": "Send",
+      "placeholder": "Password",
+      "warning": "Incorrect password. Please try again."
     }
   },
   "closeBtn": "Close",

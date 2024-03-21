@@ -3,18 +3,19 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import InfoIcon from '@mui/icons-material/Info';
 import { useTranslation } from 'react-i18next';
-import ResultsModal from '../modals/Results';
 import BasicModal from '../modals/Basic';
 import CompanyModal from '../modals/Company';
 import BankModal from '../modals/Bank';
 import FeeModal from '../modals/Fees';
+import OrdinaryModal from '../modals/OrdinaryModal';
 
 const DetailResults = ({ results }) => {
 
 
-    const [openBasic, setOpenBasic] = React.useState(false);
+  const [openBasic, setOpenBasic] = React.useState(false);
   const [openCompany, setOpenCompany] = React.useState(false);
   const [openBank, setOpenBank] = React.useState(false);
+  const [openOrdinary, setOpenOrdinary] = React.useState(false);
 
   const [open, setOpen] = React.useState(new Array(results.fees.length).fill(false)); // Создаем массив состояний для каждого модального окна
 
@@ -57,6 +58,14 @@ const handleClose = (index) => {
 
   const handleCloseBank = () => {
     setOpenBank(false);
+  };
+
+  const handleOpenOrdinary = () => {
+    setOpenOrdinary(true);
+  };
+
+  const handleCloseOrdinary = () => {
+    setOpenOrdinary(false);
   };
 
   const [countries, setCountries] = React.useState([]);
@@ -154,6 +163,27 @@ const handleClose = (index) => {
       </div>
     </div> 
     ))}
+
+    {results.ordinary.countries.length != 0 && 
+      <div className="flex items-center justify-between bg-gray-700 p-3 rounded mb-2 my-4">
+      <span style={{ display: 'flex', alignItems: 'center' }}>
+        {t('result.ordinary.countries')}
+      </span>
+      <div className="flex items-center">
+        <OrdinaryModal
+          open={openOrdinary}
+          handleClose={handleCloseOrdinary}
+          ordinary = {results.ordinary}
+        />
+        <div>{Math.round(results.ordinary.extraFee + results.ordinary.fee).toLocaleString()} ₸</div>
+        <Tooltip title="Info">
+            <IconButton onClick={handleOpenOrdinary}>
+            <InfoIcon style={{color: 'white'}} />
+          </IconButton>
+        </Tooltip>
+      </div>
+    </div> 
+    }
   </>
 }
 

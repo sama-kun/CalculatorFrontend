@@ -4,12 +4,10 @@ import SynonymizerPage from './pages/synonymizer';
 
 function App() {
   return (
-    <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/synonymizer" element={<SynonymizerPage />} />
       </Routes>
-    </Router>
   );
 }
 
