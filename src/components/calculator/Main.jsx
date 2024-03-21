@@ -24,10 +24,10 @@ const MainForm = () => {
     try {
       let response = {};
       console.log(data);
-      // if (data.typeOfMark) {
-      response = await axiosInstance.post('/calculator', data);
-      // } else response = await axiosInstance.post('/calculator', data);
-      // console.log(response.data)
+      if (data.typeOfMark == 'renewal') {
+      response = await axiosInstance.post('/calculator/renewal', data);
+      } else response = await axiosInstance.post('/calculator', data);
+      console.log(response.data)
       setServerResponse(response.data);
     } catch (error) {
       console.error('Error submitting form:', error);

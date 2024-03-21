@@ -48,7 +48,7 @@ const OrdinaryModal = ({ open, handleClose, ordinary}) => {
           <Typography id="modal-description" sx={{ mt: 2 }}>
           {t('result.modal.extraFee')}
           {ordinary.extraFee &&
-            <p><strong>{ordinary.extraMark} x {Math.round(ordinary.extraOneFee).toLocaleString()} ₸ = { Math.round(ordinary.extraFee).toLocaleString() } ₸</strong></p>
+            <p><strong>{ordinary.extraMark} x {Math.round(ordinary.oneFee).toLocaleString()} ₸ = { Math.round(ordinary.extraFee).toLocaleString() } ₸</strong></p>
           }
           </Typography>
         

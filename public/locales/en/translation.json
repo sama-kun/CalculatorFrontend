@@ -36,7 +36,8 @@
       "thirdFee": "Fee for 3rd class: ",
       "extraFee": "Payment for additional classes: ",
       "ordinary": "For all classes: ",
-      "free": "Regardless of the class: "
+      "free": "Regardless of the class: ",
+      "super": "For each class: "
     },
     "password": {
       "label": "Enter password for detailed information",

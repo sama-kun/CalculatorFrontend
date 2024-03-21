@@ -68,6 +68,12 @@ const FeeModal = ({ open, handleClose, name , code , res}) => {
           </Typography>
         }
 
+        {res.superFee &&
+          <Typography id="modal-description" sx={{ mt: 2 }}>
+            {t('result.modal.super')} <strong>{res.mark} x {Math.round(res.superOneFee).toLocaleString()} ₸ = { Math.round(res.superFee).toLocaleString() } ₸</strong>
+          </Typography>
+        }
+
         <Typography id="modal-description" sx={{ mt: 2 }}>
             {t('result.modal.res')} <strong>{Math.round(res.sum).toLocaleString()} ₸</strong>
           </Typography>
