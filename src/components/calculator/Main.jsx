@@ -25,7 +25,7 @@ const MainForm = () => {
       let response = {};
       console.log(data);
       // if (data.typeOfMark) {
-        response = await axiosInstance.post('/calculator/test', data);
+      response = await axiosInstance.post('/calculator', data);
       // } else response = await axiosInstance.post('/calculator', data);
       // console.log(response.data)
       setServerResponse(response.data);
